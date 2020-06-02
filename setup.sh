@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 function linkDotfile {
   filename=$(basename ${1})
