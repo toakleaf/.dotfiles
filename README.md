@@ -9,5 +9,7 @@
 ## Change it:
 
 Anything file dropped in `/links` will get symlinked to `~/` when you execute setup.sh.
+
 Any existing symlinks will get overwritten.
+
 Any existing files will get copied in place and replaced with symlink.
