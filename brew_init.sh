@@ -51,6 +51,18 @@ brew install ack
 brew install git
 brew install tree
 
+# Install Apps via Cask.
+# https://formulae.brew.sh/cask/
+brew cask install google-chrome
+brew cask install virtualbox
+brew cask install 1password
+brew cask install slack
+brew cask install vscodium
+brew cask install tableplus
+brew cask install insomnia
+brew cask install iterm2
+brew cask install zoomus
+brew cask install soundsource
 
 # Remove outdated versions from the cellar.
 brew cleanup
