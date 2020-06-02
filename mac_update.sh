@@ -8,8 +8,8 @@ brew update
 brew upgrade
 
 # Update npm & packages
-# npm install npm -g
-# npm update -g
+npm install npm -g
+npm update -g
 
 # Update Ruby & gems
 # sudo gem update —system
