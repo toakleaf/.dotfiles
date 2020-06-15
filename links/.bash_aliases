@@ -24,6 +24,7 @@ alias ip="curl icanhazip.com"
 alias h='history'
 alias k='kubectl'
 alias :q="exit"
+alias tree='tree -C'
 
 alias cd..='cd ..'
 alias ..='cd ..'
@@ -33,6 +34,10 @@ alias .....='cd ../../../../'
 alias .3='cd ../../../'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../..'
+
+## Docker
+alias dc='docker-compose'
+alias dcr='docker-compose run --rm'
 
 ## Python/Django
 alias pytox='tox -e py36'

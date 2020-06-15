@@ -1,0 +1,10 @@
+draw_bold_text_with_bright_colors: false
+
+font:
+  normal:
+    family: Operator Mono Lig
+    style: Book
+
+  italic:
+    family: Operator Mono Lig
+    style: Book Italic
