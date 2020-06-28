@@ -1,0 +1,63 @@
+{
+  "git.enableSmartCommit": true,
+  "editor.formatOnSave": true,
+  "sort-imports.default-sort-style": "module-scoped",
+  "cSpell.userWords": [
+    "clsx",
+    "debouncing",
+    "dotfile",
+    "dotfiles",
+    "geofences",
+    "getenv",
+    "ints",
+    "jsonify",
+    "kubernetes",
+    "permissioned",
+    "pylint",
+    "pytz",
+    "shortcode",
+    "shortcodes",
+    "subheader",
+    "superpedestrian",
+    "symlink",
+    "symlinked",
+    "symlinks",
+    "testid",
+    "toakleaf",
+    "tzinfo",
+    "uncompacted",
+    "unmount",
+    "unmounting"
+  ],
+  "editor.tabSize": 2,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "gitlens.blame.highlight.locations": [
+    "gutter",
+    "overview",
+    "line"
+  ],
+  "gitlens.blame.format": "${author|18} ${ago|14}",
+  "gitlens.blame.avatars": false,
+  "git.autofetch": true,
+  "gitlens.recentChanges.highlight.locations": [
+    "line",
+    "overview",
+    "gutter"
+  ],
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.currentLine.enabled": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "Operator Mono Lig",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Dark+ with Italics",
+  "python.formatting.autopep8Args": [
+    "--max-line-length",
+    "100",
+    "--aggressive"
+  ],
+  "python.formatting.provider": "black",
+}
+
