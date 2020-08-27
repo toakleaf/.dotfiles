@@ -13,3 +13,5 @@ eval "$(jump shell)"
 if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
 fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -47,9 +47,17 @@ brew install php
 brew install gmp
 
 # Install other useful binaries.
+brew install tmux
 brew install ack
 brew install git
 brew install tree
+brew install zsh-syntax-highlighting
+brew install thefuck
+
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# see: https://github.com/junegunn/fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 
 # Install Apps via Cask.
 # https://formulae.brew.sh/cask/

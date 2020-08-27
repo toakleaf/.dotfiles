@@ -1,0 +1,20 @@
+alias wget='wget -c'
+alias o="open ."
+alias ip="curl icanhazip.com"
+alias h='history'
+alias k='kubectl'
+alias tree='tree -C'
+
+# Color iterm2 tab RBG (0-255)
+alias tabcolor=iterm2_tab_color
+
+## Docker
+alias dc='docker-compose'
+alias dcr='docker-compose run --rm'
+
+## Python/Django
+alias pytox='tox -e py36'
+alias pym='python3 manage.py'
+alias mkenv='python3 -m venv venv'
+alias startenv='source venv/bin/activate && which python3'
+alias stopenv='deactivate'

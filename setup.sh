@@ -20,7 +20,7 @@ function linkDotfile {
   ln -s ${1} ${dest}
 }
 
-for filepath in $(find $(pwd)/links -type f); do
+for filepath in $(find ~/.dotfiles/links -type f); do
   echo "For dotfile ${filepath}:"
   linkDotfile $filepath
 done
