@@ -58,6 +58,8 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 # see: https://github.com/junegunn/fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
+# see: https://gist.github.com/kevin-smets/8568070
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 
 # Install Apps via Cask.
 # https://formulae.brew.sh/cask/
