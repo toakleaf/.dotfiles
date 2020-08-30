@@ -28,10 +28,9 @@ function linkDotfiles {
     fpath=${absPath#"$1"}
     fpath=${fpath%%"/$fname"}
     destPath="${2}$fpath"
-    linkDotfile $absPath $destPath
+    addSymlink $absPath $destPath
   done
 }
 
 linkDotfiles "${HOME}/.dotfiles/links" "${HOME}"
 linkDotfiles "${HOME}/.dotfiles/VSCode" "${HOME}/Library/Application Support/Code/User"
-linkDotfiles "${HOME}/.dotfiles/.config" "${HOME}/.config"
