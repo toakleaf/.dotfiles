@@ -40,6 +40,7 @@ brew install gnupg
 
 # Install more recent versions of some macOS tools.
 brew install vim --with-override-system-vi
+brew install neovim
 brew install grep
 brew install openssh
 brew install screen
@@ -53,13 +54,6 @@ brew install git
 brew install tree
 brew install zsh-syntax-highlighting
 brew install thefuck
-
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-# see: https://github.com/junegunn/fzf
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
-# see: https://gist.github.com/kevin-smets/8568070
-git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 
 # Install Apps via Cask.
 # https://formulae.brew.sh/cask/

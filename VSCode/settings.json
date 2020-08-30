@@ -3,18 +3,26 @@
   "editor.formatOnSave": true,
   "sort-imports.default-sort-style": "module-scoped",
   "cSpell.userWords": [
+    "API's",
+    "Kibana",
+    "Vieweset",
     "clsx",
     "debouncing",
     "dotfile",
     "dotfiles",
+    "geofence",
     "geofences",
     "getenv",
     "ints",
     "jsonify",
     "kubernetes",
+    "paginators",
     "permissioned",
+    "permissioning",
+    "personalizations",
     "pylint",
     "pytz",
+    "serializers",
     "shortcode",
     "shortcodes",
     "subheader",
@@ -24,6 +32,7 @@
     "symlinks",
     "testid",
     "toakleaf",
+    "twilio",
     "tzinfo",
     "uncompacted",
     "unmount",
@@ -32,19 +41,11 @@
   "editor.tabSize": 2,
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "gitlens.blame.highlight.locations": [
-    "gutter",
-    "overview",
-    "line"
-  ],
+  "gitlens.blame.highlight.locations": ["gutter", "overview", "line"],
   "gitlens.blame.format": "${author|18} ${ago|14}",
   "gitlens.blame.avatars": false,
   "git.autofetch": true,
-  "gitlens.recentChanges.highlight.locations": [
-    "line",
-    "overview",
-    "gutter"
-  ],
+  "gitlens.recentChanges.highlight.locations": ["line", "overview", "gutter"],
   "gitlens.hovers.currentLine.over": "line",
   "gitlens.currentLine.enabled": false,
   "workbench.iconTheme": "material-icon-theme",
@@ -59,5 +60,5 @@
     "--aggressive"
   ],
   "python.formatting.provider": "black",
+  "prettier.requireConfig": true
 }
-

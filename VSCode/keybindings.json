@@ -1,0 +1,23 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "ctrl+left",
+    "command": "cursorWordAccessibilityLeft",
+    "when": "accessibilityModeEnabled && textInputFocus"
+  },
+  {
+    "key": "alt+left",
+    "command": "-cursorWordAccessibilityLeft",
+    "when": "accessibilityModeEnabled && textInputFocus"
+  },
+  {
+    "key": "ctrl+right",
+    "command": "cursorWordAccessibilityRight",
+    "when": "accessibilityModeEnabled && textInputFocus"
+  },
+  {
+    "key": "alt+right",
+    "command": "-cursorWordAccessibilityRight",
+    "when": "accessibilityModeEnabled && textInputFocus"
+  }
+]

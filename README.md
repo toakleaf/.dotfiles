@@ -9,11 +9,11 @@
 
 ## Change it/Add new dotfiles:
 
-Anything file dropped in `/links` will get symlinked to `~/` when you execute setup.sh.
+Anything file dropped in `/links/`, `VSCode/`, or `.config/` will get symlinked to `~/` when you execute link.sh.
 
 Any existing symlinks will get overwritten.
 
-Any existing files will get copied in place and replaced with symlink.
+Any existing files will get copied in place with date stamps and replaced with symlink.
 
 ## Setup a new computer:
 
