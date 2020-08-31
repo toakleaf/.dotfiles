@@ -41,6 +41,8 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'mbbill/undotree'
 Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-startify'
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
 " Initialize plugin system
 call plug#end()
@@ -66,7 +68,6 @@ vmap <leader>a <Plug>(coc-codeaction-selected)
 nmap <leader>a <Plug>(coc-codeaction-selected)
 
 " Remaps
-
 inoremap <C-c> <esc>
 inoremap jk <esc>
 noremap <end> <esc>
@@ -88,6 +89,9 @@ nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>pi :PlugInstall<CR>
 nnoremap <silent> <Leader>= :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
+xnoremap K :move '<-2<CR>gv-gv
+xnoremap J :move '<+1<CR>gv-gv
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 " GoTo code navigation.
 nmap <leader>gd <Plug>(coc-definition)
@@ -127,4 +131,5 @@ augroup THE_PRIMEAGEN
     autocmd!
     autocmd BufWritePre * :call TrimWhitespace()
 augroup END
+
 
