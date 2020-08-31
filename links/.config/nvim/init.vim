@@ -14,6 +14,8 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
+set showmatch
+set mps+=<:>
 
 set tabstop=2
 set softtabstop=2
