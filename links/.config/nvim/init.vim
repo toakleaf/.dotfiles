@@ -17,6 +17,8 @@ set incsearch
 set showmatch
 set mps+=<:>
 set mouse=a
+set hidden
+set confirm
 
 set tabstop=2
 set softtabstop=2
@@ -46,6 +48,8 @@ Plug 'mbbill/undotree'
 Plug 'airblade/vim-gitgutter'
 Plug 'mhinz/vim-startify'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+Plug 'luochen1990/rainbow'
+Plug 'tpope/vim-vinegar'
 
 " Initialize plugin system
 call plug#end()
@@ -60,11 +64,20 @@ set background=dark
 highlight Comment cterm=italic gui=italic
 highlight String cterm=italic gui=italic
 
+let g:rainbow_active = 1
 
+" fzf and grep and netrw oh my
 if executable('rg')
     let g:rg_derive_root='true'
 endif
 
+let g:netrw_browse_split = 2
+let g:netrw_banner = 0
+let g:netrw_winsize = 25
+
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+let $FZF_DEFAULT_OPTS='--reverse'
+let g:fzf_checkout_track_key = 'ctrl-t'
 
 " Spellcheck setting
 vmap <leader>a <Plug>(coc-codeaction-selected)
@@ -84,7 +97,6 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
-nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <Leader>ps :Rg<SPACE>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <Leader>pf :Files<CR>
