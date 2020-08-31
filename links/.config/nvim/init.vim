@@ -71,6 +71,8 @@ nmap <leader>a <Plug>(coc-codeaction-selected)
 inoremap <C-c> <esc>
 inoremap jk <esc>
 noremap <end> <esc>
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " clear search
 nnoremap <leader>/ :let @/=""<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
