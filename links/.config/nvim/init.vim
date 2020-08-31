@@ -29,7 +29,7 @@ let mapleader = " "
 call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
-
+" - Avoid using standard Vim directory names like 'plugin'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -40,6 +40,7 @@ Plug 'junegunn/vim-easy-align' " Shorthand notation; fetches https://github.com/
 Plug 'gruvbox-community/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'mbbill/undotree'
+Plug 'airblade/vim-gitgutter'
 
 " Initialize plugin system
 call plug#end()
@@ -61,7 +62,8 @@ endif
 
 
 " Spellcheck setting
-set nospell
+vmap <leader>a <Plug>(coc-codeaction-selected)
+nmap <leader>a <Plug>(coc-codeaction-selected)
 
 " Remaps
 
