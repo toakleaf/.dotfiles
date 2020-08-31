@@ -16,6 +16,7 @@ set undofile
 set incsearch
 set showmatch
 set mps+=<:>
+set mouse=a
 
 set tabstop=2
 set softtabstop=2
