@@ -9,6 +9,7 @@ set cursorline
 set scs
 set updatetime=50
 set noswapfile
+set ignorecase
 set smartcase
 set nobackup
 set undodir=~/.vim/undodir
