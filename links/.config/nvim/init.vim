@@ -53,7 +53,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'mhinz/vim-startify'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'luochen1990/rainbow'
-Plug 'tpope/vim-vinegar'
 
 " Initialize plugin system
 call plug#end()
@@ -71,13 +70,16 @@ highlight String cterm=italic gui=italic
 let g:rainbow_active = 1
 
 " fzf and grep and netrw and CoC
+let FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 if executable('rg')
     let g:rg_derive_root='true'
 endif
 
-let g:netrw_browse_split = 2
 let g:netrw_banner = 0
-let g:netrw_winsize = 25
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 20
 
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPTS='--reverse'
@@ -104,6 +106,7 @@ nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
+nnoremap <leader>t :Lex<CR>
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>hcw :h <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>csw :CocSearch <C-R>=expand("<cword>")<CR><CR>
@@ -118,6 +121,7 @@ nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 nnoremap <leader>ff :GFiles<CR>
 nnoremap <Leader>fd :Files<CR>
 nnoremap <leader>fg :Rg<SPACE>
+nnoremap <leader>fb :Buffers<CR>
 
 " GoTo code navigation.
 nmap <leader>gd <Plug>(coc-definition)

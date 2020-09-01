@@ -47,6 +47,7 @@ brew install screen
 brew install php
 brew install gmp
 brew install ripgrep
+brew install ag
 
 # Install other useful binaries.
 brew install tmux
