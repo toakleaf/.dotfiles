@@ -143,7 +143,8 @@ nmap <leader>gj :diffget //3<CR>
 nmap <leader>gf :diffget //2<CR>
 nmap <leader>gs :G<CR>
 nnoremap <leader>gc :GCheckout<CR>
-nnoremap <leader>gp :Gpush<CR>
+nnoremap <leader>gp :Gpull<CR>
+nnoremap <leader>gpp :Gpush<CR>
 nnoremap <leader>gf :Gfetch<CR>
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
