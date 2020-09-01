@@ -103,6 +103,7 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " clear search
 nnoremap <leader>/ :let @/=""<CR>
+nnoremap <leader>q :bd<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
