@@ -180,6 +180,7 @@ augroup END
 
 " .........................................
 " Fern Directory Browser
+" see: https://github.com/nickjj/dotfiles/commit/7dde08e7e2c44965999c4d416a803b8f19014ee1
 
 " Disable netrw.
 let g:loaded_netrw  = 1
@@ -203,8 +204,11 @@ endfunction
 
 " Custom settings and mappings.
 let g:fern#disable_default_mappings = 1
+let g:fern#disable_viewer_hide_cursor = 1
+let g:fern#default_hidden = 1
+let g:fern#drawer_width = 35
 
-noremap <silent> <Leader>f :Fern . -drawer -reveal=% -toggle -width=35<CR><C-w>=
+noremap <silent> <Leader>- :Fern . -drawer -reveal=% -toggle -width=35<CR><C-w>=
 
 function! FernInit() abort
   nmap <buffer><expr>
