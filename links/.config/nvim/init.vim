@@ -23,6 +23,7 @@ set confirm
 set scrolloff=8
 set nohlsearch
 set autoread
+set clipboard=unnamedplus
 
 set tabstop=2
 set softtabstop=2
