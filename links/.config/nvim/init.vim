@@ -7,7 +7,7 @@ set nowrap
 set termguicolors
 set cursorline
 set scs
-set updatetime=1000
+set updatetime=50
 set noswapfile
 set smartcase
 set nobackup
@@ -19,6 +19,9 @@ set mps+=<:>
 set mouse=a
 set hidden
 set confirm
+set scrolloff=8
+set nohlsearch
+set autoread
 
 set tabstop=2
 set softtabstop=2
@@ -66,7 +69,7 @@ highlight String cterm=italic gui=italic
 
 let g:rainbow_active = 1
 
-" fzf and grep and netrw oh my
+" fzf and grep and netrw and CoC
 if executable('rg')
     let g:rg_derive_root='true'
 endif
@@ -77,7 +80,11 @@ let g:netrw_winsize = 25
 
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPTS='--reverse'
-let g:fzf_checkout_track_key = 'ctrl-t'
+
+" Add `:OR` command for organize imports of the current buffer.
+command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+" Prettier
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " Spellcheck setting
 vmap <leader>a <Plug>(coc-codeaction-selected)
@@ -97,12 +104,8 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
-nnoremap <Leader>ps :Rg<SPACE>
-nnoremap <C-p> :GFiles<CR>
-nnoremap <Leader>pf :Files<CR>
-nnoremap <leader>gc :GCheckout<CR>
-nnoremap <leader>ghw :h <C-R>=expand("<cword>")<CR><CR>
-nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>hcw :h <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>csw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>pi :PlugInstall<CR>
 nnoremap <silent> <Leader>= :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
@@ -110,12 +113,17 @@ xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '<+1<CR>gv-gv
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
+" FZF
+nnoremap <leader>ff :GFiles<CR>
+nnoremap <Leader>fd :Files<CR>
+nnoremap <leader>fg :Rg<SPACE>
+
 " GoTo code navigation.
 nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>gy <Plug>(coc-type-definition)
 nmap <leader>gi <Plug>(coc-implementation)
 nmap <leader>gr <Plug>(coc-references)
-nmap <leader>rr <Plug>(coc-rename)
+nmap <leader>rn <Plug>(coc-rename)
 nmap <leader>g[ <Plug>(coc-diagnostic-prev)
 nmap <leader>g] <Plug>(coc-diagnostic-next)
 nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev-error)
@@ -126,6 +134,8 @@ nnoremap <leader>cr :CocRestart
 nmap <leader>gj :diffget //3<CR>
 nmap <leader>gf :diffget //2<CR>
 nmap <leader>gs :G<CR>
+nnoremap <leader>gc :GCheckout<CR>
+nnoremap <leader>gp :Gpush<CR>
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
@@ -139,6 +149,14 @@ fun! TrimWhitespace()
     call winrestview(l:save)
 endfun
 
+fun! PrettierAutoformat()
+    let l:conf = globpath(system("git rev-parse --show-toplevel")[:-2], ".prettierrc*")
+    "let result = confirm(l:conf)
+    if !empty(l:conf)
+        call CocAction('runCommand', 'prettier.formatFile')
+    endif
+endfun
+
 augroup highlight_yank
     autocmd!
     autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank()
@@ -149,4 +167,7 @@ augroup THE_PRIMEAGEN
     autocmd BufWritePre * :call TrimWhitespace()
 augroup END
 
-
+augroup prettier_it_up
+    autocmd!
+    autocmd BufWritePre *.{js,jsx,css,html,vue,md,scss,less,json,yaml,yml,mdx,ts,tsx} :call PrettierAutoformat()
+augroup END
