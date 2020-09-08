@@ -56,6 +56,7 @@ brew install git
 brew install tree
 brew install zsh-syntax-highlighting
 brew install thefuck
+brew install ctags
 
 # Install Apps via Cask.
 # https://formulae.brew.sh/cask/

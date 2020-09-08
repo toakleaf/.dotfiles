@@ -22,5 +22,8 @@
     "toakleaf",
     "tpope",
     "vipga"
-  ]
+  ],
+  "python.jediEnabled": false,
+  "python.jediPath": "/usr/local/lib/python3.8/site-packages",
+  "suggest.timeout": 500
 }
