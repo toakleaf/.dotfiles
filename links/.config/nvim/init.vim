@@ -145,7 +145,7 @@ nmap <leader>gs :G<CR>
 nnoremap <leader>gb :GBranches<CR>
 nnoremap <leader>gc :Git checkout -b<SPACE>
 nnoremap <leader>gp :Gpull<CR>
-nnoremap <leader>gpp :Gpush<CR>
+nnoremap <leader>gpp :Gpush -u origin HEAD<CR>
 nnoremap <leader>gf :Gfetch<CR>
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
