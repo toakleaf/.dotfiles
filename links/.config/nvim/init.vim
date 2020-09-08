@@ -118,7 +118,7 @@ nnoremap <silent> <Leader>= :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '<+1<CR>gv-gv
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+nnoremap <silent> <leader> :WhichKey '<SPACE>'<CR>
 
 " FZF
 nnoremap <leader>ff :GFiles<CR>
@@ -142,7 +142,8 @@ nnoremap <leader>cr :CocRestart
 nmap <leader>gj :diffget //3<CR>
 nmap <leader>gf :diffget //2<CR>
 nmap <leader>gs :G<CR>
-nnoremap <leader>gc :GBranches<CR>
+nnoremap <leader>gb :GBranches<CR>
+nnoremap <leader>gc :Git checkout -b<SPACE>
 nnoremap <leader>gp :Gpull<CR>
 nnoremap <leader>gpp :Gpush<CR>
 nnoremap <leader>gf :Gfetch<CR>
