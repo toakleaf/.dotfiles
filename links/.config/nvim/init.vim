@@ -56,6 +56,7 @@ Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'luochen1990/rainbow'
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-git-status.vim'
+Plug 'tpope/vim-commentary'
 
 " Initialize plugin system
 call plug#end()

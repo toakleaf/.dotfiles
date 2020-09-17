@@ -1,5 +1,7 @@
 # .dotfiles
 
+![https://xkcd.com/1205/](https://imgs.xkcd.com/comics/is_it_worth_the_time_2x.png)
+
 ## Do it:
 
 1. `cd ~`
