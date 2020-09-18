@@ -123,6 +123,7 @@ nnoremap <silent> <Leader>nh <C-w>n
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '<+1<CR>gv-gv
 nnoremap <silent> <leader> :WhichKey '<SPACE>'<CR>
+nnoremap <leader>o :only<CR>
 
 " FZF
 nnoremap <leader>ff :GFiles<CR>
