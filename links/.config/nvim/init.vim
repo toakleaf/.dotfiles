@@ -82,6 +82,7 @@ Plug 'lambdalisue/glyph-palette.vim'
 Plug 'wincent/scalpel'
 Plug 'tpope/vim-commentary'
 Plug 'lifepillar/vim-cheat40'
+Plug 'wellle/targets.vim'
 
 " Initialize plugin system
 call plug#end()
