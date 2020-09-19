@@ -61,6 +61,8 @@ Using macros             @<n><c>       N
 Appending macros @CAPS   :let @<C>='…' C
 Inserting in macro       :let @<c>
                            ='«C-r w»   C
+Indenting                V<Move><n>>   V
+                         V<Move><n><   V
 }}}
 Favorites{{{1
 Jump to prev buf/pos     «C-o»         N
