@@ -58,6 +58,7 @@ Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-git-status.vim'
 Plug 'lambdalisue/nerdfont.vim'
 Plug 'lambdalisue/fern-renderer-nerdfont.vim'
+Plug 'lambdalisue/glyph-palette.vim'
 Plug 'wincent/scalpel'
 Plug 'tpope/vim-commentary'
 
@@ -257,3 +258,10 @@ augroup FernGroup
   autocmd!
   autocmd FileType fern call FernInit()
 augroup END
+
+augroup my-glyph-palette
+  autocmd! *
+  autocmd FileType fern call glyph_palette#apply()
+  autocmd FileType nerdtree,startify call glyph_palette#apply()
+augroup END
+
