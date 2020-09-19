@@ -81,6 +81,7 @@ Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'lambdalisue/glyph-palette.vim'
 Plug 'wincent/scalpel'
 Plug 'tpope/vim-commentary'
+Plug 'lifepillar/vim-cheat40'
 
 " Initialize plugin system
 call plug#end()
@@ -110,59 +111,68 @@ let $FZF_DEFAULT_OPTS='--reverse'
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 " Prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
-
-" Spellcheck setting
-vmap <leader>a <Plug>(coc-codeaction-selected)
-nmap <leader>a <Plug>(coc-codeaction-selected)
+" Cheat40 default sheet is off
+let g:cheat40_use_default = 0
 
 " Remaps
 inoremap <C-c> <esc>
 inoremap jk <esc>
 noremap <end> <esc>
+" Tab completions
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-" clear search
-nnoremap <leader>/ :let @/=""<CR>
-nnoremap <leader>q :bd<CR>
+
+nnoremap <silent> <leader> :WhichKey '<SPACE>'<CR>
+nnoremap <leader>? :Cheat40<CR>
+nnoremap <leader>hw :h <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>u :UndotreeShow<CR>
+
 nnoremap <leader>sv :source $MYVIMRC<CR>
+nnoremap <leader>pi :PlugInstall<CR>
+nnoremap <leader>cr :CocRestart
+" Code actions so 'aw' spellcheck works
+vmap <leader>a <Plug>(coc-codeaction-selected)
+nmap <leader>a <Plug>(coc-codeaction-selected)
+
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
-nnoremap <leader>u :UndotreeShow<CR>
-nnoremap <leader>hcw :h <C-R>=expand("<cword>")<CR><CR>
-nnoremap <leader>csw :CocSearch <C-R>=expand("<cword>")<CR><CR>
-nnoremap <leader>pi :PlugInstall<CR>
 nnoremap <silent> <Leader>= :vertical resize +5<CR>
-nnoremap <silent> <Leader>- :vertical resize -5<CR>
 nnoremap <silent> <Leader>n <C-w>v
 nnoremap <silent> <Leader>nh <C-w>n
+nnoremap <leader>o :only<CR>
+nnoremap <leader>q :bd<CR>
+
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '<+1<CR>gv-gv
-nnoremap <silent> <leader> :WhichKey '<SPACE>'<CR>
-nnoremap <leader>o :only<CR>
 
 " FZF
 nnoremap <leader>ff :GFiles<CR>
 nnoremap <Leader>fd :Files<CR>
-nnoremap <leader>fg :Rg<SPACE>
 nnoremap <leader>fb :Buffers<CR>
+
+" RG
+nnoremap <leader>rg :Rg<SPACE>
+nnoremap <leader>rgw :CocSearch <C-R>=expand("<cword>")<CR><CR>
+
+" Renaming
+nmap <leader>rn <Plug>(coc-rename)
+
+" clear search
+nnoremap <leader>/ :let @/=""<CR>
 
 " GoTo code navigation.
 nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>gy <Plug>(coc-type-definition)
 nmap <leader>gi <Plug>(coc-implementation)
 nmap <leader>gr <Plug>(coc-references)
-nmap <leader>rn <Plug>(coc-rename)
 nmap <leader>g[ <Plug>(coc-diagnostic-prev)
 nmap <leader>g] <Plug>(coc-diagnostic-next)
 nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev-error)
 nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
-nnoremap <leader>cr :CocRestart
 
 " Sweet Sweet FuGITive
-nmap <leader>gj :diffget //3<CR>
-nmap <leader>gf :diffget //2<CR>
 nmap <leader>gs :G<CR>
 nnoremap <leader>gb :GBranches<CR>
 nnoremap <leader>gbl :Git blame<CR>
@@ -171,6 +181,8 @@ nnoremap <leader>gp :Gpull<CR>
 nnoremap <leader>gpp :Gpush -u origin HEAD<CR>
 nnoremap <leader>gf :Gfetch<CR>
 nnoremap <leader>gmm :Git merge master<CR>
+nmap <leader>gj :diffget //3<CR>
+nmap <leader>gf :diffget //2<CR>
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
