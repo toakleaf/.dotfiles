@@ -56,8 +56,10 @@ Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'luochen1990/rainbow'
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-git-status.vim'
-Plug 'tpope/vim-commentary'
+Plug 'lambdalisue/nerdfont.vim'
+Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'wincent/scalpel'
+Plug 'tpope/vim-commentary'
 
 " Initialize plugin system
 call plug#end()
@@ -224,8 +226,7 @@ let g:fern#disable_default_mappings = 1
 let g:fern#disable_viewer_hide_cursor = 1
 let g:fern#default_hidden = 1
 let g:fern#drawer_width = 35
-" Disable listing ignored files/directories
-let g:fern_git_status#disable_ignored = 1
+let g:fern#renderer = "nerdfont"
 
 noremap <silent> <Leader>- :Fern . -drawer -reveal=% -toggle -width=35<CR><C-w>=
 

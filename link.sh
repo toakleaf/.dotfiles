@@ -7,14 +7,14 @@ function addSymlink {
   mkdir -p "$2"
 
   if [ -h "${dest}" ]; then
-    # Existing symlink 
+    # Existing symlink
     echo "Removing existing symlink: $dest"
-    rm ${dest} 
+    rm ${dest}
 
   elif [ -f "${dest}" ]; then
     # Existing file
     echo "Backing up existing file: $dest"
-    mv ${dest}{,.${dateStr}}    
+    mv ${dest}{,.${dateStr}}
   fi
 
   echo "Creating new symlink from $1 to $dest\n"
@@ -34,3 +34,8 @@ function linkDotfiles {
 
 linkDotfiles "${HOME}/.dotfiles/links" "${HOME}"
 linkDotfiles "${HOME}/.dotfiles/VSCode" "${HOME}/Library/Application Support/Code/User"
+
+# For italics and true color in tmux
+# see: https://medium.com/@dubistkomisch/how-to-actually-get-italics-and-true-colour-to-work-in-iterm-tmux-vim-9ebe55ebc2be
+tic -x ~/xterm-256color-italic.terminfo
+tic -x ~/tmux-256color.terminfo
