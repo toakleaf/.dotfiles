@@ -35,9 +35,13 @@ let mapleader = " "
 
 let g:coc_global_extensions = [
   \ 'coc-css',
+  \ 'coc-dictionary',
   \ 'coc-eslint',
   \ 'coc-highlight',
+  \ 'coc-html',
+  \ 'coc-jest',
   \ 'coc-json',
+  \ 'coc-lit-html',
   \ 'coc-marketplace',
   \ 'coc-pairs',
   \ 'coc-prettier',
@@ -46,9 +50,12 @@ let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-spell-checker',
   \ 'coc-svelte',
+  \ 'coc-svg',
   \ 'coc-terminal',
   \ 'coc-tsserver',
   \ 'coc-vetur',
+  \ 'coc-webpack',
+  \ 'coc-xml',
   \ 'coc-yaml',
   \ 'coc-yank'
   \ ]
