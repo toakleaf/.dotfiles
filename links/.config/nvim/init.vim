@@ -77,17 +77,29 @@ highlight String cterm=italic gui=italic
 
 let g:rainbow_active = 1
 
-" fzf and grep and netrw and CoC
+" fzf and grep and CoC
 let FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 if executable('rg')
     let g:rg_derive_root='true'
 endif
 
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 20
+let g:coc_global_extensions = [
+  \ 'coc-css',
+  \ 'coc-eslint',
+  \ 'coc-json',
+  \ 'coc-marketplace',
+  \ 'coc-pairs',
+  \ 'coc-prettier',
+  \ 'coc-python',
+  \ 'coc-snippets',
+  \ 'coc-spell-checker',
+  \ 'coc-svelte',
+  \ 'coc-terminal',
+  \ 'coc-tsserver',
+  \ 'coc-vetur',
+  \ 'coc-yaml',
+  \ 'coc-yank'
+  \ ]
 
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPTS='--reverse'
