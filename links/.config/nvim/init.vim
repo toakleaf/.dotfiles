@@ -33,6 +33,26 @@ set smartindent
 
 let mapleader = " "
 
+let g:coc_global_extensions = [
+  \ 'coc-css',
+  \ 'coc-eslint',
+  \ 'coc-highlight',
+  \ 'coc-json',
+  \ 'coc-marketplace',
+  \ 'coc-pairs',
+  \ 'coc-prettier',
+  \ 'coc-python',
+  \ 'coc-sh',
+  \ 'coc-snippets',
+  \ 'coc-spell-checker',
+  \ 'coc-svelte',
+  \ 'coc-terminal',
+  \ 'coc-tsserver',
+  \ 'coc-vetur',
+  \ 'coc-yaml',
+  \ 'coc-yank'
+  \ ]
+
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
@@ -40,7 +60,7 @@ call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
 " - Avoid using standard Vim directory names like 'plugin'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', { 'branch': 'release', 'do': { -> coc#util#install() } }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'stsewd/fzf-checkout.vim'
@@ -82,24 +102,6 @@ let FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 if executable('rg')
     let g:rg_derive_root='true'
 endif
-
-let g:coc_global_extensions = [
-  \ 'coc-css',
-  \ 'coc-eslint',
-  \ 'coc-json',
-  \ 'coc-marketplace',
-  \ 'coc-pairs',
-  \ 'coc-prettier',
-  \ 'coc-python',
-  \ 'coc-snippets',
-  \ 'coc-spell-checker',
-  \ 'coc-svelte',
-  \ 'coc-terminal',
-  \ 'coc-tsserver',
-  \ 'coc-vetur',
-  \ 'coc-yaml',
-  \ 'coc-yank'
-  \ ]
 
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPTS='--reverse'
