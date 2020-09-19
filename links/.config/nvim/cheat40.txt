@@ -53,10 +53,25 @@ About {{{2
        before a motion or a text object)
   *    Acts on text under/after cursor
 }}}
+Needs Work{{{1
+Using replacement mode   R             N
+Viewing registers        :reg          C
+Recording macros         q<c><Move>q   N
+Using macros             @<n><c>       N
+Appending macros @CAPS   :let @<C>='…' C
+Inserting in macro       :let @<c>
+                           ='«C-r w»   C
+}}}
+Favorites{{{1
+Jump to prev buf/pos     «C-o»         N
+Jump to next buf/pos     «C-I»         N
+Change inside tag        cit          *N
+Append next line to cur  J             N
+}}}
 Custom {{{1
 Remap <esc> key          \jk           I
 Remap <esc> key          «C-c»         I
-Remap <esc> key          «end»
+Remap <esc> key          «end»         N
 
 Open WhichKey guide      \             N
 Open Cheat40             \?            N
@@ -80,6 +95,7 @@ Split window horizontal  \nh           N
 Close all other windows  \o            N
 Close buffer -not window \q            N
 
+Comment out line         \gcc          N
 Move line up             \K           *V
 Move line down           \J           *V
 
