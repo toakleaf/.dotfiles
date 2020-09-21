@@ -7,6 +7,7 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export FPATH="/usr/local/share/zsh/functions:$FPATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/tyler/.oh-my-zsh"

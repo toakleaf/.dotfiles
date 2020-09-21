@@ -110,7 +110,7 @@ Rg cur word to new buf   \rgw         *N
 
 Scalpel/find/replace wrd \e           *N
 Rename all symbol in buf \rn          *N
-Clear / search           \/            N
+FZF lines in buffer      \/            N
 
 Goto definition          \gd          *N
 Goto type definition     \gy          *N

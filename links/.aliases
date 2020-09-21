@@ -4,6 +4,9 @@ alias ip="curl icanhazip.com"
 alias h='history'
 alias k='kubectl'
 alias tree='tree -C'
+alias v='nvim'
+alias v.='nvim .'
+alias src='source ~/.zshrc'
 
 # Color iterm2 tab RBG (0-255)
 alias tabcolor=iterm2_tab_color

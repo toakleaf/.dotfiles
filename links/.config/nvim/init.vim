@@ -112,7 +112,7 @@ if executable('rg')
     let g:rg_derive_root='true'
 endif
 
-let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+let g:fzf_layout = { 'window': { 'width': 0.85, 'height': 0.85 } }
 let $FZF_DEFAULT_OPTS='--reverse'
 
 " Add `:OR` command for organize imports of the current buffer.
@@ -168,7 +168,7 @@ nnoremap <leader>rgw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 nmap <leader>rn <Plug>(coc-rename)
 
 " clear search
-nnoremap <leader>/ :let @/=""<CR>
+nnoremap <leader>/ :BLines<CR>
 
 " GoTo code navigation.
 nmap <leader>gd <Plug>(coc-definition)

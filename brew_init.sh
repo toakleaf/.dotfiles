@@ -48,6 +48,7 @@ brew install php
 brew install gmp
 brew install ripgrep
 brew install ag
+brew install bat
 
 # Install other useful binaries.
 brew install tmux
