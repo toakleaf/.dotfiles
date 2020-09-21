@@ -24,6 +24,8 @@ set scrolloff=8
 set nohlsearch
 set autoread
 set clipboard=unnamed
+set nosplitbelow
+set splitright
 
 set tabstop=2
 set softtabstop=2
