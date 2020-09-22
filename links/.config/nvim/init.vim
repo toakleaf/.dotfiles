@@ -139,7 +139,10 @@ nnoremap <leader>u :UndotreeShow<CR>
 
 nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>pi :PlugInstall<CR>
-nnoremap <leader>cr :CocRestart
+nnoremap <leader>cr :CocRestart<CR>
+nnoremap <leader>cc :CocCommand<CR>
+nnoremap <leader>cl :CocList<CR>
+
 " Code actions so 'aw' spellcheck works
 vmap <leader>a <Plug>(coc-codeaction-selected)
 nmap <leader>a <Plug>(coc-codeaction-selected)

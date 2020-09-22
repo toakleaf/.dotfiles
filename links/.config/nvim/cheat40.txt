@@ -84,6 +84,8 @@ Open Fern file tree      \-            N
 Source vimrc             \sv           N
 PlugInstall              \pi           N
 CocRestart               \cr           N
+CocCommand menu          \cc           N
+CocList menu             \cl           N
 Coc-codeaction-selected  \a           *N
 Coc spellcheck selected  \aw          *N
 
