@@ -63,6 +63,8 @@ Inserting in macro       :let @<c>
                            ='«C-r w»   C
 Indenting                V<Move><n>>   V
                          V<Move><n><   V
+Search next word         *            *N
+Search previous word     #            *N
 }}}
 Favorites{{{1
 Jump to prev buf/pos     «C-o»         N
@@ -93,7 +95,11 @@ Move left a window pane  \h            N
 Move down a window pane  \p            N
 Move up a window pane    \k            N
 Move right a window pane \l            N
-+5 window size           \=            N
+Decrease win width 10    \H            N
+Decrease win height 10   \J            N
+Increase win height 10   \K            N
+Increase win width 10    \L            N
+Equalize all win panes   \=            N
 Split window vertical    \n            N
 Split window horizontal  \nh           N
 Close all other windows  \o            N

@@ -1,5 +1,5 @@
 syntax on
-filetype plugin on
+filetype plugin indent on
 set cmdheight=2
 set guicursor=
 set nu rnu
@@ -151,7 +151,11 @@ nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
-nnoremap <silent> <Leader>= :vertical resize +5<CR>
+nnoremap <Leader>H :vertical resize -10<CR>
+nnoremap <Leader>J :resize -10<CR>
+nnoremap <Leader>K :resize +10<CR>
+nnoremap <Leader>L :vertical resize +10<CR>
+nnoremap <Leader>= <C-w>=
 nnoremap <silent> <Leader>n <C-w>v
 nnoremap <silent> <Leader>nh <C-w>n
 nnoremap <leader>o :only<CR>
@@ -166,7 +170,7 @@ nnoremap <Leader>fd :Files<CR>
 nnoremap <leader>fb :Buffers<CR>
 
 " RG
-nnoremap <leader>rg :Rg<SPACE>
+nnoremap <leader>rg :Rg<CR>
 nnoremap <leader>rgw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 
 " Renaming
