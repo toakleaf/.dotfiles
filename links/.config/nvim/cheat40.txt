@@ -100,10 +100,10 @@ Decrease win height 10   \J            N
 Increase win height 10   \K            N
 Increase win width 10    \L            N
 Equalize all win panes   \=            N
+Close window (not buff)  \c            N
 Split window vertical    \n            N
 Split window horizontal  \nh           N
 Close all other windows  \o            N
-Close buffer -not window \q            N
 
 Comment out line         \gcc          N
 Move line up             \K           *V

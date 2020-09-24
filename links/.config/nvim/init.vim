@@ -156,10 +156,10 @@ nnoremap <Leader>J :resize -10<CR>
 nnoremap <Leader>K :resize +10<CR>
 nnoremap <Leader>L :vertical resize +10<CR>
 nnoremap <Leader>= <C-w>=
+nnoremap <Leader>w <C-w>c
 nnoremap <silent> <Leader>n <C-w>v
 nnoremap <silent> <Leader>nh <C-w>n
 nnoremap <leader>o :only<CR>
-nnoremap <leader>q :bd<CR>
 
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '<+1<CR>gv-gv
