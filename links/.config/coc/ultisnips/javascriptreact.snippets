@@ -1,0 +1,57 @@
+# A valid snippet should starts with:
+#
+#		snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#		endsnippet
+#
+# Snippet options:
+#
+#		b - Beginning of line.
+#		i - In-word expansion.
+#		w - Word boundary.
+#		r - Regular expression
+#		e - Custom context snippet
+#		A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#		snippet emitter "emitter properties" b
+#		private readonly ${1} = new Emitter<$2>()
+#		public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#		endsnippet
+#
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+
+snippet testBolierplate "test boilerplate" b
+import React from "react";
+import { I18nProvider } from "react-i18next";
+import { MemoryRouter } from "react-router-dom";
+
+import { MuiThemeProvider } from "@material-ui/core/styles";
+import { cleanup, fireEvent, render, waitFor } from "@testing-library/react";
+
+import i18n from "../../../I18n/i18n";
+import { RiderContext } from "../../../context";
+import spTheme from "../../../spTheme";
+import $1 from "..";
+
+describe("<$1 />", () => {
+  afterEach(cleanup);
+
+  it("$2", () => {
+    const { debug } = render(
+      <MuiThemeProvider theme={spTheme}>
+        <I18nProvider i18n={i18n}>
+          <MemoryRouter>
+            <RiderContext.Provider value={{}}>
+              <$1 />
+            </RiderContext.Provider>
+          </MemoryRouter>
+        </I18nProvider>
+      </MuiThemeProvider>,
+    );
+  });
+});
+endsnippet
