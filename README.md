@@ -7,7 +7,7 @@
 1. `cd ~`
 2. `git clone git@github.com:toakleaf/.dotfiles.git`
 3. `cd .dotfiles`
-4. `source setup.sh`
+4. `source link.sh`
 
 ## Change it/Add new dotfiles:
 
