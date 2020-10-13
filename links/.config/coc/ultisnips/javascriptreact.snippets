@@ -24,9 +24,11 @@
 #
 # Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
 
-snippet testBolierplate "test boilerplate" b
+snippet testBolierplate "Test boilerplate" b
+import "@testing-library/jest-dom/extend-expect";
+
 import React from "react";
-import { I18nProvider } from "react-i18next";
+import { I18nextProvider } from "react-i18next";
 import { MemoryRouter } from "react-router-dom";
 
 import { MuiThemeProvider } from "@material-ui/core/styles";
@@ -35,7 +37,7 @@ import { cleanup, fireEvent, render, waitFor } from "@testing-library/react";
 import i18n from "../../../I18n/i18n";
 import { RiderContext } from "../../../context";
 import spTheme from "../../../spTheme";
-import $1 from "..";
+import $1 from "../$1";
 
 describe("<$1 />", () => {
   afterEach(cleanup);
@@ -43,15 +45,68 @@ describe("<$1 />", () => {
   it("$2", () => {
     const { debug } = render(
       <MuiThemeProvider theme={spTheme}>
-        <I18nProvider i18n={i18n}>
+        <I18nextProvider i18n={i18n}>
           <MemoryRouter>
             <RiderContext.Provider value={{}}>
               <$1 />
             </RiderContext.Provider>
           </MemoryRouter>
-        </I18nProvider>
+        </I18nextProvider>
       </MuiThemeProvider>,
     );
+	debug();
   });
 });
+endsnippet
+
+
+snippet oct "Open Close Tag" i
+<$1>
+	$2
+</$1>
+endsnippet
+
+
+snippet function "()=>{}" i
+() => {
+	$1
+}
+endsnippet
+
+
+snippet useEffect "Empty useEffect" b
+useEffect(() => {
+	$1
+}, []);
+endsnippet
+
+
+snippet rc "React Component" b
+import React, { useContext } from "react";
+import { useTranslation } from "react-i18next";
+import { useParams} from "react-router-dom";
+
+import { Grid, Typography } from "@material-ui/core";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+
+import { RiderContext } from "../../context";
+
+const useStyles = makeStyles((theme) => ({
+
+}));
+
+const $1 = () => {
+  const theme = useTheme();
+  const classes = useStyles(theme);
+  const { t } = useTranslation();
+  const {} = useContext(RiderContext);
+  const {} = useParams();
+
+  return (
+    <>
+    </>
+  );
+};
+
+export default $1;
 endsnippet

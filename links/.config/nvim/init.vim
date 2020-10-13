@@ -26,6 +26,8 @@ set autoread
 set clipboard=unnamed
 set nosplitbelow
 set splitright
+set sidescroll=1
+set completeopt=longest,menuone
 
 set tabstop=2
 set softtabstop=2
@@ -84,7 +86,7 @@ Plug 'mbbill/undotree'
 Plug 'airblade/vim-gitgutter'
 Plug 'mhinz/vim-startify'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
-Plug 'luochen1990/rainbow'
+Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-git-status.vim'
 Plug 'lambdalisue/nerdfont.vim'
@@ -92,8 +94,8 @@ Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'lambdalisue/glyph-palette.vim'
 Plug 'wincent/scalpel'
 Plug 'lifepillar/vim-cheat40'
-Plug 'wellle/targets.vim',
-Plug 'alvan/vim-closetag'
+Plug 'wellle/targets.vim'
+Plug 'TaDaa/vimade'
 
 " Initialize plugin system
 call plug#end()
@@ -107,8 +109,8 @@ colorscheme gruvbox
 set background=dark
 highlight Comment cterm=italic gui=italic
 highlight String cterm=italic gui=italic
-
-let g:rainbow_active = 1
+let g:airline_section_c = '%f'
+let g:airline_section_y = ''
 
 " fzf and grep and CoC
 let FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
@@ -125,6 +127,8 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " Cheat40 default sheet is off
 let g:cheat40_use_default = 0
+" Fade settings
+let g:vimade = {"fadelevel": 0.7}
 
 " Remaps
 inoremap <C-c> <esc>
@@ -133,6 +137,7 @@ noremap <end> <esc>
 " Tab completions
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 nnoremap <silent> <leader> :WhichKey '<SPACE>'<CR>
 nnoremap <leader>? :Cheat40<CR>
@@ -309,39 +314,4 @@ augroup my-glyph-palette
   autocmd FileType fern call glyph_palette#apply()
   autocmd FileType nerdtree,startify call glyph_palette#apply()
 augroup END
-
-" .........................................
-" Closetag settings
-" filenames like *.xml, *.html, *.xhtml, ...
-" These are the file extensions where this plugin is enabled.
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
-
-" filenames like *.xml, *.xhtml, ...
-" This will make the list of non-closing tags self-closing in the specified files.
-let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
-
-" filetypes like xml, html, xhtml, ...
-" These are the file types where this plugin is enabled.
-let g:closetag_filetypes = 'html,xhtml,phtml'
-
-" filetypes like xml, xhtml, ...
-" This will make the list of non-closing tags self-closing in the specified files.
-let g:closetag_xhtml_filetypes = 'xhtml,jsx'
-
-" integer value [0|1]
-" This will make the list of non-closing tags case-sensitive (e.g. `<Link>` will be closed while `<link>` won't.)
-let g:closetag_emptyTags_caseSensitive = 1
-
-" dict
-" Disables auto-close if not in a "valid" region (based on filetype)
-let g:closetag_regions = {
-    \ 'typescript.tsx': 'jsxRegion,tsxRegion',
-    \ 'javascript.jsx': 'jsxRegion',
-    \ }
-
-" Shortcut for closing tags, default is '>'
-let g:closetag_shortcut = '>'
-
-" Add > at current position without closing the current tag, default is ''
-let g:closetag_close_shortcut = '<leader>>'
 
