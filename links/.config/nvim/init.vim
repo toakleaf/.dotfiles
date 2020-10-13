@@ -144,7 +144,7 @@ nnoremap <leader>? :Cheat40<CR>
 nnoremap <leader>hw :h <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>u :UndotreeShow<CR>
 
-nnoremap <leader>sv :source $MYVIMRC<CR>:VimadeRedraw<CR>
+nnoremap <leader>sv :source $MYVIMRC <bar> :VimadeRedraw<CR>
 nnoremap <leader>pi :PlugInstall<CR>
 nnoremap <leader>cr :CocRestart<CR>
 nnoremap <leader>cc :CocCommand<CR>
