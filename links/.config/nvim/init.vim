@@ -28,6 +28,7 @@ set nosplitbelow
 set splitright
 set sidescroll=1
 set completeopt=longest,menuone
+set redrawtime=6000
 
 set tabstop=2
 set softtabstop=2
@@ -96,6 +97,7 @@ Plug 'wincent/scalpel'
 Plug 'lifepillar/vim-cheat40'
 Plug 'wellle/targets.vim'
 Plug 'TaDaa/vimade'
+Plug 'tommcdo/vim-exchange'
 
 " Initialize plugin system
 call plug#end()
