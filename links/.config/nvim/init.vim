@@ -151,7 +151,8 @@ nnoremap <leader>pi :PlugInstall<CR>
 nnoremap <leader>cr :CocRestart<CR>
 nnoremap <leader>cc :CocCommand<CR>
 nnoremap <leader>cl :CocList<CR>
-nnoremap <leader>i a<CR><esc>O
+nnoremap <leader>o a<CR><esc>O
+nnoremap <leader>i i<CR><esc>O
 
 " Code actions so 'aw' spellcheck works
 vmap <leader>a <Plug>(coc-codeaction-selected)
@@ -169,7 +170,7 @@ nnoremap <Leader>= <C-w>=
 nnoremap <Leader>w <C-w>c
 nnoremap <silent> <Leader>n <C-w>v
 nnoremap <silent> <Leader>nh <C-w>n
-nnoremap <leader>o :only<CR>
+nnoremap <leader>on :only<CR>
 
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '<+1<CR>gv-gv
