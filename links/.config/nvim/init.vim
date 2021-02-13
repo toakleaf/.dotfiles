@@ -182,7 +182,8 @@ nnoremap <leader>fb :Buffers<CR>
 
 " RG
 nnoremap <leader>rg :Rg<CR>
-nnoremap <leader>rgw :CocSearch <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>cs :CocSearch<Space>
+nnoremap <leader>csw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 
 " Renaming
 nmap <leader>rn <Plug>(coc-rename)

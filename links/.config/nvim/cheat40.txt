@@ -114,7 +114,8 @@ FZF :Files               \fd           N
 FZF :Buffers             \fb           N
 
 RipGrep (RG)             \rg           N
-Rg cur word to new buf   \rgw         *N
+CocSearch                \cs          *N
+Rg cur word to new buf   \csw         *N
 
 Scalpel/find/replace wrd \e           *N
 Rename all symbol in buf \rn          *N
