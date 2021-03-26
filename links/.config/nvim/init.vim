@@ -3,7 +3,7 @@ filetype plugin indent on
 set cmdheight=2
 set guicursor=
 set nu rnu
-set nowrap
+set wrap
 set termguicolors
 set cursorline
 set scs
@@ -29,6 +29,7 @@ set splitright
 set sidescroll=1
 set completeopt=longest,menuone
 set redrawtime=6000
+set hlsearch
 
 set tabstop=2
 set softtabstop=2
@@ -98,6 +99,8 @@ Plug 'lifepillar/vim-cheat40'
 Plug 'wellle/targets.vim'
 Plug 'TaDaa/vimade'
 Plug 'tommcdo/vim-exchange'
+Plug 'haya14busa/is.vim'
+Plug 'AndrewRadev/splitjoin.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -153,6 +156,8 @@ nnoremap <leader>cc :CocCommand<CR>
 nnoremap <leader>cl :CocList<CR>
 nnoremap <leader>o a<CR><esc>O
 nnoremap <leader>i i<CR><esc>O
+nmap <leader>ss :SplitjoinSplit<cr>j^
+nmap <leader>sj :SplitjoinJoin<cr>
 
 " Code actions so 'aw' spellcheck works
 vmap <leader>a <Plug>(coc-codeaction-selected)
@@ -182,7 +187,7 @@ nnoremap <leader>fb :Buffers<CR>
 
 " RG
 nnoremap <leader>rg :Rg<CR>
-nnoremap <leader>cs :CocSearch<Space>
+nnoremap <leader>cs :CocSearch<SPACE><SPACE>-A<SPACE>6<C-LEFT><C-LEFT><LEFT>
 nnoremap <leader>csw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 
 " Renaming
@@ -202,6 +207,7 @@ nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev-error)
 nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
 
 " Sweet Sweet FuGITive
+set diffopt+=vertical
 nmap <leader>gs :G<CR>
 nnoremap <leader>gb :GBranches<CR>
 nnoremap <leader>gbl :Git blame<CR>
@@ -209,7 +215,7 @@ nnoremap <leader>gc :Git checkout -b<SPACE>
 nnoremap <leader>gp :Gpull<CR>
 nnoremap <leader>gpp :Gpush -u origin HEAD<CR>
 nnoremap <leader>gf :Gfetch<CR>
-nnoremap <leader>gmm :Git merge master<CR>
+nnoremap <leader>gmm :Git merge origin/master<CR>
 nmap <leader>gj :diffget //3<CR>
 nmap <leader>gf :diffget //2<CR>
 
