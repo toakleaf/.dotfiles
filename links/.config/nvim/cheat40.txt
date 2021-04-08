@@ -67,6 +67,14 @@ Search next word         *            *N
 Search previous word     #            *N
 }}}
 Favorites{{{1
+camelCase                crc           N
+MixedCase                crm           N
+snake_case               crs           N
+UPPER_CASE               cru           N
+dash-case                cr-           N
+dot.case                 cr.           N
+space case               cr<space>     N
+Title Case               crt           N
 Jump to prev buf/pos     «C-o»         N
 Jump to next buf/pos     «C-I»         N
 Change inside tag        cit          *N
