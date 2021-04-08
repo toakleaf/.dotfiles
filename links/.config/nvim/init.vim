@@ -101,6 +101,7 @@ Plug 'TaDaa/vimade'
 Plug 'tommcdo/vim-exchange'
 Plug 'haya14busa/is.vim'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'tpope/vim-abolish'
 
 " Initialize plugin system
 call plug#end()
