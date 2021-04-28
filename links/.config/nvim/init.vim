@@ -147,7 +147,6 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 nnoremap <silent> <leader> :WhichKey '<SPACE>'<CR>
 nnoremap <leader>? :Cheat40<CR>
-nnoremap <leader>hw :h <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>u :UndotreeShow<CR>
 
 nnoremap <leader>sv :source $MYVIMRC <bar> :VimadeRedraw<CR>
@@ -164,10 +163,10 @@ nmap <leader>sj :SplitjoinJoin<cr>
 vmap <leader>a <Plug>(coc-codeaction-selected)
 nmap <leader>a <Plug>(coc-codeaction-selected)
 
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
+nnoremap <nowait> <leader>h :wincmd h<CR>
+nnoremap <nowait> <leader>j :wincmd j<CR>
+nnoremap <nowait> <leader>k :wincmd k<CR>
+nnoremap <nowait> <leader>l :wincmd l<CR>
 nnoremap <Leader>H :vertical resize -10<CR>
 nnoremap <Leader>J :resize -10<CR>
 nnoremap <Leader>K :resize +10<CR>
@@ -225,6 +224,11 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" GitGutter
+nmap ghs <Plug>(GitGutterStageHunk)
+nmap ghu <Plug>(GitGutterUndoHunk)
+nmap ghp <Plug>(GitGutterPreviewHunk)
 
 fun! TrimWhitespace()
     let l:save = winsaveview()
