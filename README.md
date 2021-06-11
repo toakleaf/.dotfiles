@@ -24,3 +24,8 @@ Run `source mac_init.sh` to set system defaults.
 Run `source brew_init.sh` to install apps (via brew and cask).
 
 Run `source mac_update.sh` to update apps in brew/npm/app store
+
+## Other Stuff
+
+- reload zsh `source ~/.zshrc`
+- change node versions `nvm install [whole number of version for latest]`
