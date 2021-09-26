@@ -58,6 +58,7 @@ brew install tree
 brew install zsh-syntax-highlighting
 brew install thefuck
 brew install ctags
+brew install derailed/k9s/k9s
 
 # Install Apps via Cask.
 # https://formulae.brew.sh/cask/
