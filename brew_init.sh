@@ -54,6 +54,7 @@ brew install bat
 brew install tmux
 brew install ack
 brew install git
+brew install tldr
 brew install tree
 brew install zsh-syntax-highlighting
 brew install thefuck
@@ -62,16 +63,17 @@ brew install derailed/k9s/k9s
 
 # Install Apps via Cask.
 # https://formulae.brew.sh/cask/
-brew cask install google-chrome
-brew cask install virtualbox
-brew cask install 1password
-brew cask install slack
-brew cask install vscodium
-brew cask install tableplus
-brew cask install insomnia
-brew cask install iterm2
-brew cask install zoomus
-brew cask install soundsource
+brew install --cask google-chrome
+brew install --cask virtualbox
+brew install --cask 1password
+brew install --cask slack
+brew install --cask vscodium
+brew install --cask tableplus
+brew install --cask insomnia
+brew install --cask iterm2
+brew install --cask zoom
+brew install --cask soundsource
+brew install --cask insomnia
 
 # Remove outdated versions from the cellar.
 brew cleanup

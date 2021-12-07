@@ -11,6 +11,9 @@ defaults write com.apple.dock autohide -bool true
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 
+# Don't scroll like an ipad
+defaults write -g com.apple.swipescrolldirection -bool NO
+
 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # see: https://github.com/junegunn/fzf
