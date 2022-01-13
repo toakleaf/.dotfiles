@@ -49,6 +49,9 @@ brew install gmp
 brew install ripgrep
 brew install ag
 brew install bat
+# brew install autojump
+arch -arm64 brew install autojump
+arch -arm64 brew install zsh-vi-mode
 
 # Install other useful binaries.
 brew install tmux

@@ -76,7 +76,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions autojump iterm2 python tmux yarn vagrant)
+plugins=(git zsh-autosuggestions autojump iterm2 python tmux yarn vagrant zsh-syntax-highlighting)
 plugins+=(zsh-vi-mode)
 
 source $ZSH/oh-my-zsh.sh
@@ -113,7 +113,6 @@ source $ZSH/oh-my-zsh.sh
 
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
