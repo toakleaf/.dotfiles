@@ -213,7 +213,7 @@ nnoremap <leader>gb :GBranches<CR>
 nnoremap <leader>gbl :Git blame<CR>
 nnoremap <leader>gc :Git checkout -b<SPACE>
 nnoremap <leader>gp :Gpull<CR>
-nnoremap <leader>gpp :Gpush -u origin HEAD<CR>
+nnoremap <leader>gpp :Git push -u origin HEAD<CR>
 nnoremap <leader>gf :Gfetch<CR>
 nnoremap <leader>gmm :Git merge origin/master<CR>
 nmap <leader>gj :diffget //3<CR>
