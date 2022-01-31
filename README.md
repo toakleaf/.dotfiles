@@ -29,3 +29,10 @@ Run `source mac_update.sh` to update apps in brew/npm/app store
 
 - reload zsh `source ~/.zshrc`
 - change node versions `nvm install [whole number of version for latest]`
+
+### Install Node properly
+1. Install Node.js from https://nodejs.org/en/download/
+2. Update to the latest version of npm `npm install npm -g`
+3. Make a new folder for the npm global packages `mkdir ~/.npm-packages`
+4. Tell npm where to find/store them `npm config set prefix ~/.npm-packages`
+5. Verify the install `node -v` & `npm -v`

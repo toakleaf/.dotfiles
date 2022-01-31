@@ -53,7 +53,6 @@
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "window.zoomLevel": 0,
-  "workbench.colorTheme": "Dark+ with Italics",
   "python.formatting.autopep8Args": [
     "--max-line-length",
     "100",
