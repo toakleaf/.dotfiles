@@ -2,7 +2,7 @@
 
 ![https://xkcd.com/1205/](https://imgs.xkcd.com/comics/is_it_worth_the_time_2x.png)
 
-## Do it!
+## Do it:
 
 1. `cd ~`
 2. `git clone git@github.com:toakleaf/.dotfiles.git`
