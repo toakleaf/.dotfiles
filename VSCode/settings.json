@@ -138,6 +138,12 @@
           "commands": [
               "workbench.view.search"
           ]
+      },
+      {
+          "before": ["<leader>", "g", "s"],
+          "commands": [
+              "workbench.view.scm"
+          ]
       }
   ]
 }
