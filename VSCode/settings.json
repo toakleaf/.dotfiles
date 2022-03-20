@@ -41,21 +41,12 @@
   "editor.tabSize": 2,
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "gitlens.blame.highlight.locations": [
-    "gutter",
-    "overview",
-    "line"
-  ],
+  "gitlens.blame.highlight.locations": ["gutter", "overview", "line"],
   "gitlens.blame.format": "${author|18} ${ago|14}",
   "gitlens.blame.avatars": false,
   "git.autofetch": true,
-  "gitlens.recentChanges.highlight.locations": [
-    "line",
-    "overview",
-    "gutter"
-  ],
+  "gitlens.recentChanges.highlight.locations": ["line", "overview", "gutter"],
   "gitlens.hovers.currentLine.over": "line",
-  "gitlens.currentLine.enabled": false,
   "workbench.iconTheme": "gruvbox-material-icon-theme",
   "editor.fontFamily": "Operator Mono Lig",
   "editor.fontLigatures": true,
@@ -68,7 +59,35 @@
   ],
   "python.formatting.provider": "black",
   "prettier.requireConfig": true,
-  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.colorTheme": "Gruvbox Dark (Hard)",
   "terminal.integrated.fontFamily": "OperatorMono Nerd Font",
-  "terminal.integrated.fontSize": 14
+  "terminal.integrated.fontSize": 14,
+  "gitlens.codeLens.enabled": false,
+  "vim.highlightedyank.enable": true,
+  "vim.surround": true,
+  "vim.leader": "<space>",
+  "vim.insertModeKeyBindings": [
+      {
+          "before": ["j", "k"],
+          "after": ["<Esc>"]
+      }
+  ],
+  "vim.visualModeKeyBindings": [
+      {
+          "before": [
+              ">"
+          ],
+          "commands": [
+              "editor.action.indentLines"
+          ]
+      },
+      {
+          "before": [
+              "<"
+          ],
+          "commands": [
+              "editor.action.outdentLines"
+          ]
+      }
+  ]
 }
