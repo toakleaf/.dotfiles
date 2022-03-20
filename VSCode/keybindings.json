@@ -1,4 +1,3 @@
-// Place your key bindings in this file to override the defaults
 [
   {
     "key": "ctrl+left",
@@ -19,5 +18,13 @@
     "key": "alt+right",
     "command": "-cursorWordAccessibilityRight",
     "when": "accessibilityModeEnabled && textInputFocus"
+  },
+  {
+    "key": "cmd+h",
+    "command": "workbench.action.focusPreviousGroup"
+  },
+  {
+    "key": "cmd+l",
+    "command": "workbench.action.focusNextGroup"
   }
 ]
