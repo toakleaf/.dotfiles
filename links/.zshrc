@@ -107,12 +107,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 [ -f ~/.aliases ] && source ~/.aliases
+[ -f ~/.kayak_bash ] && source ~/.kayak_bash
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
-
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
