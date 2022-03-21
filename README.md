@@ -9,7 +9,7 @@
 3. `cd .dotfiles`
 4. `source link.sh`
 
-## Change it/Add new .dotfiles:
+## Change it/Add new dotfiles:
 
 Anything file dropped in `/links/`, `VSCode/`, or `.config/` will get symlinked to `~/` when you execute link.sh.
 
