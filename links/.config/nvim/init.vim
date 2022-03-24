@@ -50,7 +50,6 @@ let g:coc_global_extensions = [
   \ 'coc-lit-html',
   \ 'coc-marketplace',
   \ 'coc-pairs',
-  \ 'coc-prettier',
   \ 'coc-python',
   \ 'coc-sh',
   \ 'coc-snippets',
@@ -102,6 +101,9 @@ Plug 'tommcdo/vim-exchange'
 Plug 'haya14busa/is.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'tpope/vim-abolish'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install --frozen-lockfile --production',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 
 " Initialize plugin system
 call plug#end()
@@ -236,13 +238,13 @@ fun! TrimWhitespace()
     call winrestview(l:save)
 endfun
 
-fun! PrettierAutoformat()
-    let l:conf = globpath(system("git rev-parse --show-toplevel")[:-2], ".prettierrc*")
-    "let result = confirm(l:conf)
-    if !empty(l:conf)
-        call CocAction('runCommand', 'prettier.formatFile')
-    endif
-endfun
+"fun! PrettierAutoformat()
+"    let l:conf = globpath(system("git rev-parse --show-toplevel")[:-2], ".prettierrc*")
+"    "let result = confirm(l:conf)
+"    if !empty(l:conf)
+"        call CocAction('runCommand', 'prettier.formatFile')
+"    endif
+"endfun
 
 augroup vimrc_help
   autocmd!
@@ -259,10 +261,21 @@ augroup THE_PRIMEAGEN
     autocmd BufWritePre * :call TrimWhitespace()
 augroup END
 
-augroup prettier_it_up
-    autocmd!
-    autocmd BufWritePre *.{js,jsx,css,html,vue,md,scss,less,json,yaml,yml,mdx,ts,tsx} :call PrettierAutoformat()
-augroup END
+" augroup prettier_it_up
+"     autocmd!
+"     autocmd BufWritePre *.{js,jsx,css,html,vue,md,scss,less,json,yaml,yml,mdx,ts,tsx} :call PrettierAutoformat()
+" augroup END
+let g:prettier#autoformat_config_present = 1
+let g:prettier#config#config_precedence = 'prefer-file'
+let g:prettier#autoformat_config_files = get(g:, 'prettier#autoformat_config_files', [
+      \'./patron/apps/helm/.prettierrc.json',
+      \'.prettierrc',
+      \'.prettierrc.yml',
+      \'.prettierrc.yaml',
+      \'.prettierrc.js',
+      \'.prettierrc.config.js',
+      \'.prettierrc.json',
+      \'.prettierrc.toml'])
 
 " .........................................
 " Fern Directory Browser
