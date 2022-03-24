@@ -1,5 +1,8 @@
 # .dotfiles
 
+> "Give me six hours to chop down a tree and I will spend the first four sharpening the axe."
+> - Abraham Lincoln I guess.
+
 ![https://xkcd.com/1205/](https://imgs.xkcd.com/comics/is_it_worth_the_time_2x.png)
 
 ## Do it:
