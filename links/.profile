@@ -1,3 +1,5 @@
+export GIT_EDITOR=nvim
+export GIT_DEFAULT_BRANCH=main
 export PATH=$PATH:$(npm get prefix)/bin
 # export COMPOSE_FILE=local.yml
 export FZF_BASE=~/.fzf
