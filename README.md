@@ -32,6 +32,7 @@ Run `source mac_update.sh` to update apps in brew/npm/app store
 
 - reload zsh `source ~/.zshrc`
 - change node versions `nvm install [whole number of version for latest]`
+- `code save-ext` will output your extensions to file
 
 ### Install Node properly
 1. Install Node.js from https://nodejs.org/en/download/

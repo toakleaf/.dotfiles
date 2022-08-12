@@ -120,7 +120,6 @@
   },
   "explorer.confirmDelete": false,
   "prettier.printWidth": 100,
-  "prettier.requireConfig": true,
   "editor.formatOnSave": true,
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -130,5 +129,8 @@
   },
   "files.exclude": {
     "**/.git": false
-  }
+  },
+  "vim.useSystemClipboard": true,
+  "prettier.requireConfig": true,
+  "editor.experimental.stickyScroll.enabled": true
 }
