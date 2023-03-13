@@ -3,27 +3,32 @@
   "sort-imports.default-sort-style": "module-scoped",
   "cSpell.userWords": [
     "API's",
-    "Kibana",
-    "Vieweset",
     "clsx",
+    "codebases",
     "debouncing",
     "dotfile",
     "dotfiles",
     "geofence",
     "geofences",
     "getenv",
+    "globwalk",
     "ints",
     "jsonify",
+    "kameleon",
+    "Kibana",
     "kubernetes",
+    "memfs",
     "paginators",
     "permissioned",
     "permissioning",
     "personalizations",
+    "preconfigured",
     "pylint",
     "pytz",
     "serializers",
     "shortcode",
     "shortcodes",
+    "stylelint",
     "subheader",
     "superpedestrian",
     "symlink",
@@ -31,27 +36,41 @@
     "symlinks",
     "testid",
     "toakleaf",
+    "Turborepo",
     "twilio",
     "tzinfo",
     "uncompacted",
     "unmount",
-    "unmounting"
+    "unmounting",
+    "Vieweset"
   ],
   "editor.tabSize": 2,
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "gitlens.blame.highlight.locations": ["gutter", "overview", "line"],
+  "gitlens.blame.highlight.locations": [
+    "gutter",
+    "overview",
+    "line"
+  ],
   "gitlens.blame.format": "${author|18} ${ago|14}",
   "gitlens.blame.avatars": false,
   "git.autofetch": true,
-  "gitlens.recentChanges.highlight.locations": ["line", "overview", "gutter"],
+  "gitlens.recentChanges.highlight.locations": [
+    "line",
+    "overview",
+    "gutter"
+  ],
   "gitlens.hovers.currentLine.over": "line",
   "workbench.iconTheme": "gruvbox-material-icon-theme",
   "editor.fontFamily": "Operator Mono Lig",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "window.zoomLevel": 0,
-  "python.formatting.autopep8Args": ["--max-line-length", "100", "--aggressive"],
+  "python.formatting.autopep8Args": [
+    "--max-line-length",
+    "100",
+    "--aggressive"
+  ],
   "python.formatting.provider": "black",
   "workbench.colorTheme": "Gruvbox Dark (Hard)",
   "terminal.integrated.fontFamily": "OperatorMono Nerd Font",
@@ -62,56 +81,118 @@
   "vim.leader": "<space>",
   "vim.insertModeKeyBindings": [
     {
-      "before": ["j", "k"],
-      "after": ["<Esc>"]
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
     }
   ],
   "vim.visualModeKeyBindings": [
     {
-      "before": [">"],
-      "commands": ["editor.action.indentLines"]
+      "before": [
+        ">"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
     },
     {
-      "before": ["<"],
-      "commands": ["editor.action.outdentLines"]
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
     }
   ],
   "vim.normalModeKeyBindings": [
     {
-      "before": ["<leader>", "f", "f"],
-      "commands": ["workbench.action.quickOpen"]
+      "before": [
+        "<leader>",
+        "f",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
     },
     {
-      "before": ["<C-I>"],
-      "commands": ["workbench.action.navigateForward"]
+      "before": [
+        "<C-I>"
+      ],
+      "commands": [
+        "workbench.action.navigateForward"
+      ]
     },
     {
-      "before": ["<leader>", "n"],
-      "commands": ["workbench.action.splitEditor"]
+      "before": [
+        "<leader>",
+        "n"
+      ],
+      "commands": [
+        "workbench.action.splitEditor"
+      ]
     },
     {
-      "before": ["<leader>", "l"],
-      "commands": ["workbench.action.focusNextGroup"]
+      "before": [
+        "<leader>",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.focusNextGroup"
+      ]
     },
     {
-      "before": ["<leader>", "h"],
-      "commands": ["workbench.action.focusPreviousGroup"]
+      "before": [
+        "<leader>",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.focusPreviousGroup"
+      ]
     },
     {
-      "before": ["<leader>", "g", "]"],
-      "commands": ["editor.action.marker.nextInFiles"]
+      "before": [
+        "<leader>",
+        "g",
+        "]"
+      ],
+      "commands": [
+        "editor.action.marker.nextInFiles"
+      ]
     },
     {
-      "before": ["<leader>", "g", "["],
-      "commands": ["editor.action.marker.prevInFiles"]
+      "before": [
+        "<leader>",
+        "g",
+        "["
+      ],
+      "commands": [
+        "editor.action.marker.prevInFiles"
+      ]
     },
     {
-      "before": ["<leader>", "r", "g"],
-      "commands": ["workbench.view.search"]
+      "before": [
+        "<leader>",
+        "r",
+        "g"
+      ],
+      "commands": [
+        "workbench.view.search"
+      ]
     },
     {
-      "before": ["<leader>", "g", "s"],
-      "commands": ["workbench.view.scm"]
+      "before": [
+        "<leader>",
+        "g",
+        "s"
+      ],
+      "commands": [
+        "workbench.view.scm"
+      ]
     }
   ],
   "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m",
@@ -132,5 +213,39 @@
   },
   "vim.useSystemClipboard": true,
   "prettier.requireConfig": true,
-  "editor.experimental.stickyScroll.enabled": true
+  "editor.stickyScroll.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.options": {
+    "extensions": [
+      ".js",
+      ".jsx",
+      ".md",
+      ".mdx",
+      ".ts",
+      ".tsx"
+    ]
+  },
+  "eslint.validate": [
+    "mdx",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "totalTypeScript.hideAllTips": false,
+  "totalTypeScript.hideBasicTips": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "[python]": {
+    "editor.formatOnType": true
+  }
 }

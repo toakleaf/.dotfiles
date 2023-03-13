@@ -121,3 +121,12 @@ source $ZSH/oh-my-zsh.sh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# Add completions for R9 tools
+fpath=($R9SRC/build/completions/zsh $fpath)
+compinit
+
+# pnpm
+export PNPM_HOME="/Users/toakleaf/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end

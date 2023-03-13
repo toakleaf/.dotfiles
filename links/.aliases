@@ -38,3 +38,10 @@ alias stopenv='deactivate'
 
 ## Full color ssh terminal
 alias ssh='TERM=xterm-256color ssh'
+
+## Git root
+alias gr='git rev-parse --show-toplevel'
+
+## Save git via stash
+alias gs='git add "$(gr)" && git stash -m "$(date): $(git show --format=%s -s)" && git stash apply'
+

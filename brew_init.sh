@@ -58,6 +58,7 @@ arch -arm64 brew install zsh-vi-mode
 
 # Install other useful binaries.
 brew install tmux
+brew install fzf
 brew install ack
 brew install git
 brew install tldr
@@ -80,6 +81,9 @@ brew install --cask iterm2
 brew install --cask zoom
 brew install --cask soundsource
 brew install --cask insomnia
+
+# Additional FZF stuff
+$(brew --prefix)/opt/fzf/install 
 
 # Remove outdated versions from the cellar.
 brew cleanup
