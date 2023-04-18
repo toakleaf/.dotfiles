@@ -36,6 +36,7 @@
     "symlinks",
     "testid",
     "toakleaf",
+    "treeify",
     "Turborepo",
     "twilio",
     "tzinfo",
@@ -65,7 +66,6 @@
   "editor.fontFamily": "Operator Mono Lig",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
-  "window.zoomLevel": 0,
   "python.formatting.autopep8Args": [
     "--max-line-length",
     "100",
@@ -247,5 +247,27 @@
   "security.workspace.trust.untrustedFiles": "open",
   "[python]": {
     "editor.formatOnType": true
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "totalTypeScript.hiddenTips": [
+    "passing-generics-to-types",
+    "omit-utility-type",
+    "tuple-type",
+    "record-utility-type",
+    "generic-slots-in-functions",
+    "type-alias-with-generics"
+  ],
+  "editor.inlineSuggest.enabled": true,
+  "editor.unicodeHighlight.allowedCharacters": {
+    " ": true
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
   }
 }
