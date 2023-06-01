@@ -3,9 +3,12 @@
   "sort-imports.default-sort-style": "module-scoped",
   "cSpell.userWords": [
     "API's",
+    "autodocs",
     "clsx",
     "codebases",
     "debouncing",
+    "docgen",
+    "Docstrings",
     "dotfile",
     "dotfiles",
     "geofence",
@@ -39,11 +42,14 @@
     "treeify",
     "Turborepo",
     "twilio",
+    "typedefs",
     "tzinfo",
     "uncompacted",
     "unmount",
     "unmounting",
-    "Vieweset"
+    "vals",
+    "Vieweset",
+    "viewports"
   ],
   "editor.tabSize": 2,
   "editor.suggestSelection": "first",
