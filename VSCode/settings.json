@@ -11,10 +11,13 @@
     "Docstrings",
     "dotfile",
     "dotfiles",
+    "estree",
+    "formtoken",
     "geofence",
     "geofences",
     "getenv",
     "globwalk",
+    "hasher",
     "ints",
     "jsonify",
     "kameleon",
@@ -38,7 +41,9 @@
     "symlinked",
     "symlinks",
     "testid",
+    "tinyglobby",
     "toakleaf",
+    "todos",
     "treeify",
     "Turborepo",
     "twilio",
@@ -48,25 +53,19 @@
     "unmount",
     "unmounting",
     "vals",
+    "vestigo",
     "Vieweset",
-    "viewports"
+    "viewports",
+    "vinxi"
   ],
   "editor.tabSize": 2,
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "gitlens.blame.highlight.locations": [
-    "gutter",
-    "overview",
-    "line"
-  ],
+  "gitlens.blame.highlight.locations": ["gutter", "overview", "line"],
   "gitlens.blame.format": "${author|18} ${ago|14}",
   "gitlens.blame.avatars": false,
   "git.autofetch": true,
-  "gitlens.recentChanges.highlight.locations": [
-    "line",
-    "overview",
-    "gutter"
-  ],
+  "gitlens.recentChanges.highlight.locations": ["line", "overview", "gutter"],
   "gitlens.hovers.currentLine.over": "line",
   "workbench.iconTheme": "gruvbox-material-icon-theme",
   "editor.fontFamily": "Operator Mono Lig",
@@ -87,118 +86,56 @@
   "vim.leader": "<space>",
   "vim.insertModeKeyBindings": [
     {
-      "before": [
-        "j",
-        "k"
-      ],
-      "after": [
-        "<Esc>"
-      ]
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
     }
   ],
   "vim.visualModeKeyBindings": [
     {
-      "before": [
-        ">"
-      ],
-      "commands": [
-        "editor.action.indentLines"
-      ]
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
     },
     {
-      "before": [
-        "<"
-      ],
-      "commands": [
-        "editor.action.outdentLines"
-      ]
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
     }
   ],
   "vim.normalModeKeyBindings": [
     {
-      "before": [
-        "<leader>",
-        "f",
-        "f"
-      ],
-      "commands": [
-        "workbench.action.quickOpen"
-      ]
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
     },
     {
-      "before": [
-        "<C-I>"
-      ],
-      "commands": [
-        "workbench.action.navigateForward"
-      ]
+      "before": ["<C-I>"],
+      "commands": ["workbench.action.navigateForward"]
     },
     {
-      "before": [
-        "<leader>",
-        "n"
-      ],
-      "commands": [
-        "workbench.action.splitEditor"
-      ]
+      "before": ["<leader>", "n"],
+      "commands": ["workbench.action.splitEditor"]
     },
     {
-      "before": [
-        "<leader>",
-        "l"
-      ],
-      "commands": [
-        "workbench.action.focusNextGroup"
-      ]
+      "before": ["<leader>", "l"],
+      "commands": ["workbench.action.focusNextGroup"]
     },
     {
-      "before": [
-        "<leader>",
-        "h"
-      ],
-      "commands": [
-        "workbench.action.focusPreviousGroup"
-      ]
+      "before": ["<leader>", "h"],
+      "commands": ["workbench.action.focusPreviousGroup"]
     },
     {
-      "before": [
-        "<leader>",
-        "g",
-        "]"
-      ],
-      "commands": [
-        "editor.action.marker.nextInFiles"
-      ]
+      "before": ["<leader>", "]"],
+      "commands": ["editor.action.marker.nextInFiles"]
     },
     {
-      "before": [
-        "<leader>",
-        "g",
-        "["
-      ],
-      "commands": [
-        "editor.action.marker.prevInFiles"
-      ]
+      "before": ["<leader>", "["],
+      "commands": ["editor.action.marker.prevInFiles"]
     },
     {
-      "before": [
-        "<leader>",
-        "r",
-        "g"
-      ],
-      "commands": [
-        "workbench.view.search"
-      ]
+      "before": ["<leader>", "r", "g"],
+      "commands": ["workbench.view.search"]
     },
     {
-      "before": [
-        "<leader>",
-        "g",
-        "s"
-      ],
-      "commands": [
-        "workbench.view.scm"
-      ]
+      "before": ["<leader>", "g", "s"],
+      "commands": ["workbench.view.scm"]
     }
   ],
   "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m",
@@ -221,17 +158,10 @@
   "prettier.requireConfig": true,
   "editor.stickyScroll.enabled": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "eslint.options": {
-    "extensions": [
-      ".js",
-      ".jsx",
-      ".md",
-      ".mdx",
-      ".ts",
-      ".tsx"
-    ]
+    "extensions": [".js", ".jsx", ".md", ".mdx", ".ts", ".tsx"]
   },
   "eslint.validate": [
     "mdx",
@@ -275,5 +205,9 @@
     "markdown": false,
     "scminput": false,
     "yaml": true
-  }
+  },
+  "typescript.tsserver.log": "off",
+  "editor.minimap.enabled": false,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "diffEditor.ignoreTrimWhitespace": false
 }
