@@ -29,7 +29,7 @@ alias dcr='docker-compose run --rm'
 
 ## Python/Django
 alias python='python3'
-alias ipython='python3 -m IPython'
+alias ipython='ipython3'
 alias pytox='tox -e py36'
 alias pym='python3 manage.py'
 alias mkenv='python3 -m venv venv'

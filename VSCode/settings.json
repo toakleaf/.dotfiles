@@ -18,12 +18,14 @@
     "getenv",
     "globwalk",
     "hasher",
+    "hoverable",
     "ints",
     "jsonify",
     "kameleon",
     "Kibana",
     "kubernetes",
     "memfs",
+    "noninteractive",
     "paginators",
     "permissioned",
     "permissioning",
@@ -40,6 +42,7 @@
     "symlink",
     "symlinked",
     "symlinks",
+    "tailwindcss",
     "testid",
     "tinyglobby",
     "toakleaf",
@@ -122,11 +125,11 @@
       "commands": ["workbench.action.focusPreviousGroup"]
     },
     {
-      "before": ["<leader>", "]"],
+      "before": ["<leader>", "g", "]"],
       "commands": ["editor.action.marker.nextInFiles"]
     },
     {
-      "before": ["<leader>", "["],
+      "before": ["<leader>", "g", "["],
       "commands": ["editor.action.marker.prevInFiles"]
     },
     {
@@ -209,5 +212,25 @@
   "typescript.tsserver.log": "off",
   "editor.minimap.enabled": false,
   "github.copilot.editor.enableAutoCompletions": true,
-  "diffEditor.ignoreTrimWhitespace": false
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "grammarly.files.include": [
+    "**/readme.md",
+    "**/README.md",
+    "**/*.txt",
+    "**/*.md"
+  ],
+  "grammarly.config.suggestions.ConjunctionAtStartOfSentence": true,
+  "grammarly.config.documentDialect": "american",
+  "grammarly.config.documentDomain": "creative",
+  "grammarly.config.suggestions.OxfordComma": true,
+  "grammarly.config.suggestions.PassiveVoice": true,
+  "grammarly.config.suggestions.PrepositionAtTheEndOfSentence": true,
+  "git.confirmSync": false,
+  "editor.defaultFormatter": "ms-python.black-formatter",
+  "editor.inlineSuggest.suppressSuggestions": true,
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "cody.autocomplete.enabled": false
 }
