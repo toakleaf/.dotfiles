@@ -130,8 +130,3 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-# deno
-export DENO_INSTALL="/Users/toakleaf/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
-# deno end
-. "/Users/toakleaf/.deno/env"
