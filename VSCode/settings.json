@@ -7,11 +7,17 @@
     "clsx",
     "codebases",
     "debouncing",
+    "debrand",
+    "debranded",
+    "disableable",
+    "disableabled",
     "docgen",
     "Docstrings",
     "dotfile",
     "dotfiles",
     "estree",
+    "extensionless",
+    "fdir",
     "formtoken",
     "geofence",
     "geofences",
@@ -19,26 +25,35 @@
     "globwalk",
     "hasher",
     "hoverable",
+    "importee",
     "ints",
     "jsonify",
     "kameleon",
     "Kibana",
     "kubernetes",
+    "Kwargs",
+    "losslessly",
     "memfs",
     "noninteractive",
+    "messageformat",
     "paginators",
+    "performantly",
     "permissioned",
     "permissioning",
     "personalizations",
+    "Pipeable",
     "preconfigured",
     "pylint",
     "pytz",
+    "rolldown",
+    "scoper",
     "serializers",
     "shortcode",
     "shortcodes",
     "stylelint",
     "subheader",
     "superpedestrian",
+    "Svgs",
     "symlink",
     "symlinked",
     "symlinks",
@@ -47,6 +62,7 @@
     "tinyglobby",
     "toakleaf",
     "todos",
+    "topo",
     "treeify",
     "Turborepo",
     "twilio",
@@ -174,9 +190,7 @@
     "typescriptreact"
   ],
   "eslint.workingDirectories": [
-    {
-      "mode": "auto"
-    }
+    {"mode": "auto"}
   ],
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -212,25 +226,14 @@
   "typescript.tsserver.log": "off",
   "editor.minimap.enabled": false,
   "github.copilot.editor.enableAutoCompletions": true,
-  "diffEditor.ignoreTrimWhitespace": false,
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "grammarly.files.include": [
-    "**/readme.md",
-    "**/README.md",
-    "**/*.txt",
-    "**/*.md"
-  ],
-  "grammarly.config.suggestions.ConjunctionAtStartOfSentence": true,
-  "grammarly.config.documentDialect": "american",
-  "grammarly.config.documentDomain": "creative",
-  "grammarly.config.suggestions.OxfordComma": true,
-  "grammarly.config.suggestions.PassiveVoice": true,
-  "grammarly.config.suggestions.PrepositionAtTheEndOfSentence": true,
-  "git.confirmSync": false,
-  "editor.defaultFormatter": "ms-python.black-formatter",
-  "editor.inlineSuggest.suppressSuggestions": true,
-  "typescript.enablePromptUseWorkspaceTsdk": true,
-  "cody.autocomplete.enabled": false
+  "diffEditor.ignoreTrimWhitespace": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

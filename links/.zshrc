@@ -123,10 +123,21 @@ source $ZSH/oh-my-zsh.sh
 
 
 # pnpm
-export PNPM_HOME="/Users/tyler/Library/pnpm"
+export PNPM_HOME="/Users/toakleaf/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
 
+# deno
+export DENO_INSTALL="/Users/toakleaf/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+# deno end
+. "/Users/toakleaf/.deno/env"
+# bun completions
+[ -s "/Users/toakleaf/.bun/_bun" ] && source "/Users/toakleaf/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
