@@ -51,6 +51,7 @@ brew install ag
 brew install bat
 brew install kubectl
 brew install pnpm
+brew install deno
 
 # brew install autojump
 arch -arm64 brew install autojump
@@ -67,6 +68,7 @@ brew install zsh-syntax-highlighting
 brew install thefuck
 brew install ctags
 brew install derailed/k9s/k9s
+brew install jandedobbeleer/oh-my-posh/oh-my-posh
 
 # Install Apps via Cask.
 # https://formulae.brew.sh/cask/
