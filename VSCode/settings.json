@@ -34,6 +34,8 @@
     "Kwargs",
     "losslessly",
     "memfs",
+    "Momondo",
+    "mundi",
     "noninteractive",
     "messageformat",
     "paginators",
@@ -71,6 +73,7 @@
     "uncompacted",
     "unmount",
     "unmounting",
+    "Unplugin",
     "vals",
     "vestigo",
     "Vieweset",
@@ -97,7 +100,35 @@
   ],
   "python.formatting.provider": "black",
   "workbench.colorTheme": "Gruvbox Dark (Hard)",
-  "terminal.integrated.fontFamily": "OperatorMono Nerd Font",
+  "workbench.colorCustomizations": {
+    "terminal.background": "#1d2021",
+    "terminal.foreground": "#ebdbb2",
+    "terminal.selectionBackground": "#665c54",
+    "terminalCursor.foreground": "#ebdbb2",
+    "terminal.ansiBlack": "#1d2021",
+    "terminal.ansiRed": "#cc241d",
+    "terminal.ansiGreen": "#98971a",
+    "terminal.ansiYellow": "#d79921",
+    "terminal.ansiBlue": "#458588",
+    "terminal.ansiMagenta": "#b16286",
+    "terminal.ansiCyan": "#689d6a",
+    "terminal.ansiWhite": "#a89984",
+    "terminal.ansiBrightBlack": "#928374",
+    "terminal.ansiBrightRed": "#fb4934",
+    "terminal.ansiBrightGreen": "#b8bb26",
+    "terminal.ansiBrightYellow": "#fabd2f",
+    "terminal.ansiBrightBlue": "#83a598",
+    "terminal.ansiBrightMagenta": "#d3869b",
+    "terminal.ansiBrightCyan": "#8ec07c",
+    "terminal.ansiBrightWhite": "#ebdbb2"
+  },
+  "terminal.integrated.minimumContrastRatio": 1,
+  "terminal.integrated.drawBoldTextInBrightColors": false,
+  "terminal.integrated.env.osx": {
+    "COLORTERM": "truecolor",
+    "TERM": "xterm-256color"
+  },
+  "terminal.integrated.fontFamily": "FiraMono Nerd Font Mono",
   "terminal.integrated.fontSize": 14,
   "gitlens.codeLens.enabled": false,
   "vim.highlightedyank.enable": true,
@@ -210,14 +241,16 @@
     "tuple-type",
     "record-utility-type",
     "generic-slots-in-functions",
-    "type-alias-with-generics"
+    "type-alias-with-generics",
+    "in-operator-narrowing",
+    "partial-utility-type"
   ],
   "editor.inlineSuggest.enabled": true,
   "editor.unicodeHighlight.allowedCharacters": {
     " ": true
   },
   "github.copilot.enable": {
-    "*": true,
+    "*": false,
     "plaintext": false,
     "markdown": false,
     "scminput": false,
@@ -235,5 +268,22 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "git.openRepositoryInParentFolders": "always",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "cursor.cpp.disabledLanguages": ["plaintext", "markdown", "scminput"],
+  "cursor.composer.shouldAllowCustomModes": true,
+  "cursor.composer.usageSummaryDisplay": "always",
+  "docker.extension.enableComposeLanguageServer": false,
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "redhat.telemetry.enabled": true,
+  "window.autoDetectColorScheme": false
 }

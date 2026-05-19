@@ -1,39 +1,49 @@
 #!/usr/bin/env bash
 
 function addSymlink {
-  fname=$(basename ${1})
+  local src="$1"
+  local dest_dir="$2"
+  local fname
+  local dateStr
+  local dest
+
+  fname=$(basename "${src}")
   dateStr=$(date +%Y-%m-%d-%H%M)
-  dest="$2/$fname"
-  mkdir -p "$2"
+  dest="${dest_dir}/${fname}"
+  mkdir -p "${dest_dir}"
 
   if [ -h "${dest}" ]; then
-    # Existing symlink
-    echo "Removing existing symlink: $dest"
-    rm ${dest}
-
-  elif [ -f "${dest}" ]; then
-    # Existing file
-    echo "Backing up existing file: $dest"
-    mv ${dest}{,.${dateStr}}
+    echo "Removing existing symlink: ${dest}"
+    rm "${dest}"
+  elif [ -e "${dest}" ]; then
+    echo "Backing up existing file: ${dest}"
+    mv "${dest}" "${dest}.${dateStr}"
   fi
 
-  echo "Creating new symlink from $1 to $dest\n"
-  ln -s ${1} ${dest}
+  echo "Creating new symlink from ${src} to ${dest}"
+  ln -s "${src}" "${dest}"
 }
 
 function linkDotfiles {
-  for absPath in $(find "$1" -mindepth 1 -type f); do
-    fname=$(basename $absPath)
-    echo "For dotfile $fname in $absPath:"
-    fpath=${absPath#"$1"}
-    fpath=${fpath%%"/$fname"}
-    destPath="${2}$fpath"
-    addSymlink $absPath $destPath
-  done
+  local src_dir="$1"
+  local dest_root="$2"
+  local absPath
+  local fname
+  local fpath
+  local destPath
+
+  while IFS= read -r -d '' absPath; do
+    fname=$(basename "${absPath}")
+    fpath=${absPath#"${src_dir}"}
+    fpath=${fpath%%"/${fname}"}
+    destPath="${dest_root}${fpath}"
+    addSymlink "${absPath}" "${destPath}"
+  done < <(find "${src_dir}" -mindepth 1 -type f -print0)
 }
 
 linkDotfiles "${HOME}/.dotfiles/links" "${HOME}"
 linkDotfiles "${HOME}/.dotfiles/VSCode" "${HOME}/Library/Application Support/Code/User"
+linkDotfiles "${HOME}/.dotfiles/VSCode" "${HOME}/Library/Application Support/Cursor/User"
 
 # For italics and true color in tmux
 # see: https://medium.com/@dubistkomisch/how-to-actually-get-italics-and-true-colour-to-work-in-iterm-tmux-vim-9ebe55ebc2be

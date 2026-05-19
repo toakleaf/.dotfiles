@@ -12,8 +12,8 @@ export ZSH="${HOME}/.oh-my-zsh"
 export XDG_CONFIG_HOME="$HOME/.config"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"                                       # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -115,18 +115,17 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
 [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
 
- # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
- export PATH="$PATH:$HOME/.rvm/bin"
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # pnpm
 export PNPM_HOME="/Users/toakleaf/Library/pnpm"
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+*":$PNPM_HOME:"*) ;;
+*) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
 
@@ -144,6 +143,30 @@ esac
 
 eval "$(oh-my-posh init zsh --config ~/.dotfiles/posh-theme.json)"
 
+zvm_after_init() {
+  autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
+  eval "$(oh-my-posh init zsh --config ~/.dotfiles/posh-theme.json)"
+}
+
 # Add completions for R9 tools
 fpath=($R9SRC/build/completions/zsh $fpath)
 compinit
+
+# nexus
+export PATH="/Users/toakleaf/.nexus/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+wt() {
+  local matches=$(git worktree list | awk '{print $1}' | xargs -I {} basename {} | grep "$1")
+  local count=$(echo "$matches" | wc -l)
+
+  if [ "$count" -eq 1 ] && [ -n "$matches" ]; then
+    local wt_path=$(git worktree list | grep "/$matches " | awk '{print $1}')
+    cd "$wt_path" 2>/dev/null
+    export R9SRC="$wt_path"
+    export R9ROOT="$wt_path/dist"
+    export R9HOME="$R9ROOT/$(basename "$R9HOME")"
+  else
+    echo "Found $count matches for '$1' (expected exactly 1)"
+  fi
+}

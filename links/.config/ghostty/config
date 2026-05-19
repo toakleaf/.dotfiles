@@ -43,7 +43,7 @@
 # resize-overlay-duration = 4s 200ms
 
 macos-titlebar-style = hidden
-theme = GruvboxDarkHard
+theme = Gruvbox Dark Hard
 font-family = "FiraMono Nerd Font Mono" 
 font-size = 14
 window-save-state = always
@@ -51,3 +51,4 @@ auto-update = download
 background-opacity = 0.98
 background-blur = true
 keybind = super+s=ignore
+link-url = true
