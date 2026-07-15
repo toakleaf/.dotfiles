@@ -81,6 +81,20 @@ export NVM_DIR="$HOME/.nvm"
 plugins=(git zsh-autosuggestions autojump iterm2 python tmux yarn vagrant zsh-syntax-highlighting gitfast)
 plugins+=(zsh-vi-mode)
 
+if [[ -n $CODEX_SHELL ]]; then
+  POSH_THEME_CONFIG="$HOME/.dotfiles/posh-theme-codex.json"
+else
+  POSH_THEME_CONFIG="$HOME/.dotfiles/posh-theme.json"
+fi
+
+# Must be defined before oh-my-zsh loads zsh-vi-mode so the hook fires
+zvm_after_init() {
+  autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
+  bindkey '^[[A' up-line-or-beginning-search
+  bindkey '^[[B' down-line-or-beginning-search
+  eval "$(oh-my-posh init zsh --config "$POSH_THEME_CONFIG")"
+}
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -141,12 +155,7 @@ esac
 # export BUN_INSTALL="$HOME/.bun"
 # export PATH="$BUN_INSTALL/bin:$PATH"
 
-eval "$(oh-my-posh init zsh --config ~/.dotfiles/posh-theme.json)"
-
-zvm_after_init() {
-  autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
-  eval "$(oh-my-posh init zsh --config ~/.dotfiles/posh-theme.json)"
-}
+eval "$(oh-my-posh init zsh --config "$POSH_THEME_CONFIG")"
 
 # Add completions for R9 tools
 fpath=($R9SRC/build/completions/zsh $fpath)
